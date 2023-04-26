@@ -1,9 +1,9 @@
 <?php
 // Connect to the database
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'paddlecult';
+$host = 'bfmugaunz9pcu60fxh35-mysql.services.clever-cloud.com';
+$username = 'ufkcppu141n1ts1d';
+$password = 'sAj0o7PctNN6wEhCLcIE';
+$database = 'bfmugaunz9pcu60fxh35';
 $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
