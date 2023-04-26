@@ -1,0 +1,148 @@
+.h31 {
+  margin: 0;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.campaign-text-child1 {
+  position: absolute;
+  height: 15.41%;
+  width: 100%;
+  top: 84.59%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, transparent, #000);
+}
+.beginner-course3,
+.view-course3 {
+  position: absolute;
+  height: 2.18%;
+  width: 47.07%;
+  top: 89.63%;
+  left: 11.95%;
+  display: flex;
+  align-items: center;
+}
+.view-course3 {
+  height: 1.91%;
+  width: 30.24%;
+  top: 93.32%;
+  font-size: 14px;
+  font-family: Inter;
+  color: #da0037;
+}
+.campaign-text3 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 733px;
+  background-image: url(./public/campaign-text3@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.frame-div {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+.intermediate-course1,
+.view-course4 {
+  position: absolute;
+  width: 50.2%;
+  top: 88.05%;
+  left: 11.9%;
+  display: flex;
+  align-items: center;
+}
+.view-course4 {
+  height: 1.91%;
+  width: 30.73%;
+  top: 93.32%;
+  left: 11.95%;
+  font-size: 14px;
+  font-family: Inter;
+  color: #da0037;
+}
+.campaign-text4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 410px;
+  height: 733px;
+  background-image: url(./public/campaign-text4@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.campaign-text-wrapper1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.group-surfing1,
+.view-course5 {
+  position: absolute;
+  height: 2.11%;
+  width: 29.17%;
+  top: 89.69%;
+  left: 11.9%;
+  display: flex;
+  align-items: center;
+}
+.view-course5 {
+  height: 1.91%;
+  width: 42.68%;
+  top: 93.32%;
+  left: 11.95%;
+  font-size: 14px;
+  font-family: Inter;
+  color: #da0037;
+}
+.campaign-text5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 410px;
+  height: 733px;
+  background-image: url(./public/campaign-text5@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.frame-group,
+.lesson1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.frame-group {
+  width: 1230px;
+  height: 733px;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 18px;
+  font-family: Syncopate;
+}
+.lesson1 {
+  position: relative;
+  width: 100%;
+  height: 884px;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+  text-align: center;
+  font-size: 57px;
+  color: #fff;
+  font-family: "Gobold Extra1";
+}

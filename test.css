@@ -1,0 +1,232 @@
+/* Base styles */
+.h31 {
+    margin: 0;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  
+  .view-course3,
+  .view-course4,
+  .view-course5 {
+    height: 1.91%;
+    font-size: 14px;
+    font-family: Inter;
+    color: #da0037;
+  }
+  
+  .campaign-text-child1 {
+    position: absolute;
+    height: 15.41%;
+    width: 100%;
+    top: 84.59%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, transparent, #000);
+  }
+  
+  .beginner-course3,
+  .intermediate-course1,
+  .group-surfing1 {
+    position: absolute;
+    height: 2.18%;
+    width: 47.07%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .campaign-text-wrapper1,
+  .frame-div,
+  .frame-group {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lesson1 {
+    position: relative;
+    width: 100%;
+    height: 884px;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    text-align: center;
+    font-size: 57px;
+    color: #fff;
+    font-family: "Gobold Extra1";
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 992px) {
+    .view-course3,
+    .view-course4,
+    .view-course5 {
+      width: 30.24%;
+      top: 93.32%;
+      left: auto;
+      right: 0;
+    }
+  
+    .beginner-course3 {
+      top: 89.63%;
+      left: 11.95%;
+    }
+  
+    .intermediate-course1 {
+      top: 88.05%;
+      left: 11.9%;
+      width: 50.2%;
+    }
+  
+    .group-surfing1 {
+      top: 89.69%;
+      left: 11.9%;
+      width: 29.17%;
+    }
+  
+    .campaign-text-wrapper1 {
+      width: 60%;
+      margin: 0 auto;
+    }
+  
+    .frame-group {
+      width: 1230px;
+      height: 733px;
+      flex-shrink: 0;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      font-size: 18px;
+      font-family: Syncopate;
+    }
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .view-course3,
+    .view-course4,
+    .view-course5 {
+      width: 30.24%;
+      top: 93.32%;
+      left: auto;
+      right: 0;
+    }
+  
+    .beginner-course3 {
+      top: 89.63%;
+      left: 11.95%;
+    }
+  
+    .intermediate-course1 {
+      top: 88.05%;
+      left: 11.9%;
+      width: 50.2%;
+    }
+  
+    .group-surfing1 {
+      top: 89.69%;
+      left: 11.9%;
+      width: 29.17%;
+    }
+  
+    .campaign-text-wrapper1 {
+      width: 80%;
+      margin: 0 auto;
+  
+    }
+  
+      /* Base styles */
+ {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Mobile styles */
+  .campaign-text5 {
+    width: 100%;
+    height: auto;
+    background-image: url(images/campaign-text5@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .group-surfing1,
+  .view-course5 {
+    position: absolute;
+    height: 3%;
+    width: 50%;
+    top: 92%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .view-course5 {
+    height: 2%;
+    width: 35%;
+    top: 96%;
+    left: 25%;
+    font-size: 1.5rem;
+    color: #da0037;
+  }
+  
+  /* Tablet styles */
+  @media screen and (min-width: 768px) {
+    .campaign-text5 {
+      height: 500px;
+    }
+  
+    .group-surfing1,
+    .view-course5 {
+      position: absolute;
+      height: 2%;
+      width: 30%;
+      top: 90%;
+      left: 35%;
+    }
+  
+    .view-course5 {
+      height: 2%;
+      width: 35%;
+      top: 95%;
+      left: 32.5%;
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 1024px) {
+    .campaign-text5 {
+      height: 600px;
+    }
+  
+    .group-surfing1,
+    .view-course5 {
+      position: absolute;
+      height: 2%;
+      width: 20%;
+      top: 85%;
+      left: 40%;
+    }
+  
+    .view-course5 {
+      height: 2%;
+      width: 25%;
+      top: 92%;
+      left: 37.5%;
+      font-size: 1.8rem;
+    }
+  }
+  
