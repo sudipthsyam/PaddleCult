@@ -9546,6 +9546,11 @@ textarea.form-control {
   margin-bottom: -20px;
   z-index: -1; }
 
+
+.wrap-about p {
+  color: #000;
+}
+
 .heading-section h2 {
   font-size: 40px;
   font-weight: 900;
