@@ -12,7 +12,7 @@
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
-  --green: #28a745;
+  --green: #28a745; 
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
@@ -1769,10 +1769,10 @@ pre {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  color: #000;
+  background-color: #000;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid ;
   border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -1785,10 +1785,10 @@ pre {
       -o-transition: none;
       transition: none; } }
   .form-control::-ms-expand {
-    background-color: transparent;
+    background-color: black;
     border: 0; }
   .form-control:-moz-focusring {
-    color: transparent;
+    color: black;
     text-shadow: 0 0 0 #495057; }
   .form-control:focus {
     color: #495057;
@@ -1822,8 +1822,8 @@ input[type="month"].form-control {
   appearance: none; }
 
 select.form-control:focus::-ms-value {
-  color: #495057;
-  background-color: #fff; }
+  color: #000;
+  background-color: #000; }
 
 .form-control-file,
 .form-control-range {
@@ -5542,7 +5542,7 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #007bff !important; }
+  background-color: #064273 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -8442,13 +8442,13 @@ h1, h2, h3, h4, h5,
         background: rgba(0, 0, 0, 0.4);
         border-radius: 5px; } }
   .ftco-navbar-light .navbar-brand {
-    color: #e52b34;
+    color: #1da2d8;
     padding-left: 25px; }
     .ftco-navbar-light .navbar-brand span {
       color: #fff; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-brand {
-        color: #fff;
+        color: #1da2d8;
         padding-left: 0; } }
   @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav {
@@ -8516,13 +8516,13 @@ h1, h2, h3, h4, h5,
         color: #fff;
         background: #e52b34; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #e52b34; }
+    color: #1da2d8; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-        color: #fff; } }
+        color: #1da2d8; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #fff !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8543,7 +8543,7 @@ h1, h2, h3, h4, h5,
       .ftco-navbar-light.scrolled .container {
         background: transparent; } }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #e52b34 !important; }
+      color: #1da2d8 !important; }
     .ftco-navbar-light.scrolled .nav-item.cta > a {
       color: #fff !important;
       background: #e52b34;
@@ -8592,7 +8592,7 @@ h1, h2, h3, h4, h5,
       color: #000000;
       padding-left: 0; }
     .ftco-navbar-light.scrolled .navbar-brand span{
-      color: #FF0000;
+      color: #1da2d8;
      }
      
 .navbar-brand {
@@ -8852,7 +8852,7 @@ h1, h2, h3, h4, h5,
   background: #fff !important; }
 
 .bg-primary {
-  background: #e52b34; }
+  background: #064273; }
 
 .btn {
   cursor: pointer;
@@ -8882,7 +8882,7 @@ h1, h2, h3, h4, h5,
         background: #e52b34;
         color: #fff; }
   .btn.btn-white {
-    background: #fff;
+    background: #def3f6;
     border: 1px solid #fff;
     color: #000000; }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
@@ -8955,7 +8955,7 @@ h1, h2, h3, h4, h5,
     border: transparent !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
     height: 50px !important;
-    background: transparent !important;
+    background: #064273 !important;
     color: rgba(255, 255, 255, 0.9) !important;
     font-size: 14px;
     border-radius: 2px;
@@ -9357,7 +9357,7 @@ textarea.form-control {
   visibility: hidden; }
 
 .bg-primary {
-  background: #e52b34 !important; }
+  background: #064273 !important; }
 
 .about-author .desc h3 {
   font-size: 24px; }
