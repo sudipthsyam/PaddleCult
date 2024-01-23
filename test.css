@@ -141,11 +141,11 @@
     }
   
       /* Base styles */
- {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+      button {
+        /* CSS styles for buttons */
+        background-color: blue;
+        color: white;
+      }
   
   body {
     font-size: 16px;

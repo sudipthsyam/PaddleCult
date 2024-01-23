@@ -1,0 +1,134 @@
+
+									.ui-datepicker {
+									width: 280px;
+									height: 340px;
+									border-radius: 0;
+									overflow: hidden;
+									font-family: Arial, sans-serif;
+								}
+							
+								.ui-datepicker .ui-datepicker-header {
+									height: 40px;
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+								}
+							
+								.ui-datepicker th {
+									padding: 0.2em;
+									text-align: center;
+									border: none;
+								}
+							
+								.ui-datepicker td {
+									padding: 0.5em;
+									text-align: center;
+									vertical-align: middle; /* Align the contents of the cell vertically in the middle */
+								}
+							
+								.ui-datepicker .ui-state-default {
+									border: none;
+									background: none;
+									color: #000;
+									width: 100%;
+									line-height: 2.2em;
+									text-align: center;
+									display: block;
+									margin: 0 auto;
+								}
+							
+								.ui-datepicker .ui-state-highlight {
+									color: #ff0000;
+								}
+							
+								.ui-datepicker .ui-state-active {
+									background-color: #000;
+									color: #fff;
+									border-radius: 50%;
+									width: 24px; /* Explicitly set width */
+									height: 24px; /* Explicitly set height */
+									line-height: 24px; /* Match line height with height */
+									display: block;
+									margin: 0 auto; /* Auto margins to center block level elements */
+								}
+							
+								.ui-datepicker select.ui-datepicker-month,
+								.ui-datepicker select.ui-datepicker-year {
+									width: 45%;
+									border-radius: 0;
+								}
+								/* Styling for the datepicker dropdowns */
+								.ui-datepicker select.ui-datepicker-month, 
+								.ui-datepicker select.ui-datepicker-year {
+									width: 45%;
+									padding: 5px;
+									border: 1px solid #aaa; 
+									border-radius: 4px;
+									background-color: #f8f8f8;
+									font-size: 14px;
+									color: #333;
+									outline: none; /* Remove the default outline */
+									margin: 0 2px; 
+								}
+							
+								.ui-datepicker select.ui-datepicker-month:hover, 
+								.ui-datepicker select.ui-datepicker-year:hover {
+									background-color: #eaeaea; /* Change background on hover */
+								}
+							
+								.ui-datepicker select.ui-datepicker-month:focus, 
+								.ui-datepicker select.ui-datepicker-year:focus {
+									border-color: #666; /* Highlight border on focus */
+								}
+							
+								.year-box, .month-box {
+								display: inline-block;
+								padding: 10px;
+								border: 1px solid #ccc;
+								cursor: pointer;
+								margin: 5px;
+								border-radius: 4px;
+								background-color: #f8f8f8;
+								text-align: center;
+								width: 50px;  
+							}
+							
+							.year-box:hover, .month-box:hover {
+								background-color: #e0e0e0;
+							}
+							
+							
+							.ui-datepicker select.ui-datepicker-month,
+							.ui-datepicker select.ui-datepicker-year {
+								background-color: #f6f6f6;
+								border: 1px solid #ccc;
+								color: #333;
+								padding: 4px 8px;
+								font-size: 1em;
+								margin: 1px;
+								width: auto;
+							}
+							
+							.ui-datepicker select.ui-datepicker-year {
+								width: 100px; /* Adjust this value based on your preference */
+							}
+							
+							.ui-datepicker select.ui-datepicker-year option:selected {
+								background-color: black;
+								color: white;
+							}
+							
+							
+									/* Change the highlight color for the selected option */
+									.ui-datepicker select.ui-datepicker-year option:checked,
+									.ui-datepicker select.ui-datepicker-month option:checked {
+										background-color: black;
+										color: white;
+									}
+							
+									/* This is to provide the desired appearance for options on some browsers */
+									.ui-datepicker select.ui-datepicker-year:focus option:hover,
+									.ui-datepicker select.ui-datepicker-month:focus option:hover {
+										background-color: black;
+										color: white;
+									}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PaddleCult - Surfing School</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/jquery.timepicker.css">
+
+	
+	<link rel="stylesheet" href="css/flaticon.css">
+	
+
+
+
+</head>
+<body>
+
+	
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="dynamic.css">
+
+<div class="checkout">
+  <input type="checkbox" id="cc" checked>
+  <label for="cc">
+      <div class="tab cc">
+        <h3 class="tab__title">Confirm and pay</h3>
+        <div class="checkout-section">
+          
+          <div class="details">
+              <h3>Your trip</h3>
+              <div class="checkout-item">
+                  <span class="checkout-label">Dates</span>
+                  <div class="checkout-data-content">
+                      <span class="checkout-data">27 Dec 2023 – 1 Jan 2024</span>
+                      <span class="checkout-edit">Edit</span>
+                  </div>
+                  
+              </div>
+              <div class="checkout-item">
+                  <span class="checkout-label">Booking Type</span>
+                  <div class="checkout-data-content">
+                      <span class="checkout-data">Surf & Stay</span>
+                      <span class="checkout-edit">Edit</span>
+                  </div>
+              </div>
+              <div class="checkout-item">
+                <span class="checkout-label">Guests</span>
+                <div class="checkout-data-content">
+                    <span class="checkout-data">1 guest</span>
+                    <span class="checkout-edit">Edit</span>
+                </div>
+            </div>
+          </div>
+      </div>
+      <!-- Modal for Dates Edit -->
+<div id="datesModal" class="full-screen-modal">
+  <div class="modal-header">
+      <span id="closeDatesModal" class="close-modal">&times;</span>
+      <h4>Edit Dates</h4>
+  </div>
+  <div class="modal-body">
+      <input type="text" id="startDate" placeholder="Start Date">
+      <input type="text" id="endDate" placeholder="End Date">
+      <button type="button" onclick="updateDates()">Update</button>
+  </div>
+</div>
+
+      </div>
+  </label>
+
+  <input type="checkbox" id="priceDetails">
+  <label for="priceDetails">
+      <div class="tab priceDetails">
+          <h3 class="tab__title">Price Details</h3>
+          <div class="tab__content">
+              <div class="price-details__content">
+                  <div class="line-item">
+                      <span>₹5,000 x 5 nights</span>
+                      <span class="price">₹25,000</span>
+                  </div>
+                  <div class="line-item">
+                      <span>Airbnb service fee</span>
+                      <span class="price">₹3,529.42</span>
+                  </div>
+                  <div class="line-item">
+                      <span>Taxes</span>
+                      <span class="price">₹3,000</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </label>
+  
+
+  <input type="checkbox" id="payment">
+  <label for="payment">
+          <div class="tab payment">
+              <h3 class="tab__title">Payment<span class="fa fa-check"></span></h3>
+              <div class="tab__content">
+                  <span class="text-large">$32.00</span>
+                  <a href="index2.html">
+                    <button type="button" class="button button--action">Pay Now</button>
+                </a>
+              </div>
+          </div>
+      </label>
+
+  <!--<input type="checkbox" id="confirmation">
+  <label for="confirmation">
+      <div class="tab confirmation">
+          <h3 class="tab__title">Confirmation<span class="fa fa-check"></h3>
+          <div class="tab__content">
+              <p>Confirm purchase?</p>
+              <button type="submit" class="button button--action yes"><span class="fa fa-check"></span>Yes</button>
+              <button type="button" class="button button--action no"><span class="fa fa-times"></span>No</button>
+      </div>
+  </label>
+</div>-->
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="dynamic.js"></script>
+
+
+
+<footer class="ftco-footer ftco-no-pb ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">PaddleCult</h2>
+                    <p>Explore the spirit of the ocean</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Open Hours</h2>
+                    <ul class="list-unstyled open-hours">
+                        <li class="d-flex"><span>Monday</span><span>9:00 - 24:00</span></li>
+                        <li class="d-flex"><span>Tuesday</span><span>9:00 - 24:00</span></li>
+                        <li class="d-flex"><span>Wednesday</span><span>9:00 - 24:00</span></li>
+                        <li class="d-flex"><span>Thursday</span><span>9:00 - 24:00</span></li>
+                        <li class="d-flex"><span>Friday</span><span>9:00 - 02:00</span></li>
+                        <li class="d-flex"><span>Saturday</span><span>9:00 - 02:00</span></li>
+                        <li class="d-flex"><span>Sunday</span><span> Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Instagram</h2>
+                    <div class="thumb d-sm-flex">
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-1.jpg);" target="_blank">
+                        </a>
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-2.jpg);" target="_blank">
+                        </a>
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-3.jpg);" target="_blank">
+                        </a>
+                    </div>
+                    <div class="thumb d-flex">
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-4.jpg);" target="_blank">
+                        </a>
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-5.jpg);" target="_blank">
+                        </a>
+                        <a href="https://www.instagram.com/paddlecult_/" class="thumb-menu img" style="background-image: url(images/insta-6.jpg);" target="_blank">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Newsletter</h2>
+                    <p>Far far away, behind the word mountains, far from the countries.</p>
+                    <form action="#" class="subscribe-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                            <input type="submit" value="Subscribe" class="form-control submit px-3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0 bg-primary py-3">
+        <div class="row no-gutters">
+            <div class="col-md-12 text-center">
+
+                <p class="mb-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.instagram.com/sudipth_syam/" target="_blank">Sudipth_Syam</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

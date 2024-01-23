@@ -1,0 +1,370 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,700";
+
+@import "https://fonts.googleapis.com/css?family=Roboto:300, 400,700";
+/* Design by Gal Shir https://dribbble.com/shots/2501344-Checkout-Interface */
+/* TODO: * Fix tabs not working when click is on top of a button */
+/*** [Colours] ***/
+/*** [Resets] ***/
+ html {
+	 box-sizing: border-box;
+	 background: #22313f;
+}
+ *, *:before, *:after {
+	 box-sizing: inherit;
+}
+ body {
+	 overflow-y: scroll;
+}
+/*** [Vars & Mixins] ***/
+/*** [Menu styling] ***/
+ .checkout {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 300px;
+	 height: 500px;
+	 font-family: "Roboto";
+	 box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+ .checkout input[type="checkbox"] {
+	 position: absolute;
+	 top: -9999px;
+	 left: -9999px;
+}
+ .checkout input[type="checkbox"] + label {
+	 position: relative;
+	 cursor: pointer;
+}
+ .checkout input[type="checkbox"] + label:first-of-type .tab {
+	 border-top-left-radius: 5px;
+	 border-top-right-radius: 5px;
+}
+ .checkout input[type="checkbox"] + label:last-of-type .tab {
+	 border-bottom-left-radius: 5px;
+	 border-bottom-right-radius: 5px;
+}
+ .checkout input[type="checkbox"]:checked + label .tab {
+	 height: 250px;
+}
+ .checkout input[type="checkbox"]:checked + label .tab__content {
+	 opacity: 1;
+}
+ .checkout input[type="checkbox"]:checked + label h3 .fa-check {
+	 opacity: 0;
+}
+ .checkout .tab {
+	 position: relative;
+	 width: 100%;
+	 height: 83.3333333333px;
+	 padding: 0.5rem 1.5rem;
+	 transition: height 400ms cubic-bezier(0.72, -0.25, 0.4, 1.2);
+	 z-index: 2;
+}
+ .checkout .tab__content {
+	 opacity: 0;
+	 transition: opacity 500ms ease;
+}
+ .checkout .tab .text-large {
+	 font-size: 3rem;
+	 font-weight: 700;
+}
+ .checkout .tab__title {
+	 font-weight: 300;
+	 margin-bottom: 35px;
+}
+ .checkout .tab__title .fa-chevron-left {
+	 margin-right: 15px;
+}
+ .checkout .tab__title .fa-check {
+	 position: absolute;
+	 right: 2rem;
+	 opacity: 1;
+	 transition: opacity 300ms ease;
+}
+ .checkout .tab .button--action {
+	 position: absolute;
+	 bottom: 1.5rem;
+	 right: 1.5rem;
+	 height: 40px;
+	 margin-top: 1.5rem;
+	 padding: 0 1rem;
+	 background: transparent;
+	 color: #eee;
+	 font-weight: 700;
+	 text-transform: uppercase;
+	 border: 2px solid #eee;
+	 cursor: pointer;
+	 border-radius: 20px;
+	 z-index: 1;
+}
+ .checkout .tab .button--circle {
+	 width: 40px;
+	 padding: 0;
+	 border-radius: 50%;
+}
+ .checkout .tab.cc {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradienteditor/#a9ead6+0,9edacb+100 */
+	 background: #a9ead6;
+	/* Old browsers */
+	 background: linear-gradient(to right, #a9ead6 0%, #9edacb 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	 color: #228b6b;
+}
+ .checkout .tab.cc .input-group input[type="text"] {
+	 padding: 0.7rem 0.8rem;
+	 background: transparent;
+	 border: 1px solid #66ae98;
+}
+ .checkout .tab.cc .input-group input[type="text"].cc-number {
+	 width: 100%;
+	 border-top-left-radius: 5px;
+	 border-top-right-radius: 5px;
+	 border-bottom: 0;
+}
+ .checkout .tab.cc .input-group input[type="text"].expiry {
+	 width: 60%;
+	 border-bottom-left-radius: 5px;
+	 border-right: 0;
+}
+ .checkout .tab.cc .input-group input[type="text"].cvc {
+	 width: 40%;
+	 border-bottom-right-radius: 5px;
+}
+ .checkout .tab.cc .input-group input[type="text"].expiry, .checkout .tab.cc .input-group input[type="text"] .cvc {
+	 display: inline-block;
+}
+ .checkout .tab.cc .input-group input[type="text"]:focus {
+	 outline: 0;
+}
+ .checkout .tab.cc .input-group input[type="checkbox"] + label:before {
+	 display: inline-block;
+	 margin-top: 2rem;
+	 margin-right: 0.5rem;
+	 width: 20px;
+	 height: 20px;
+	 background: transparent;
+	 content: "\00a0";
+	 border: 1px solid #66ae98;
+	 border-radius: 5px;
+}
+ .checkout .tab.agreement {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46cdcf+0,3fb8bf+100 */
+	 background: #46cdcf;
+	/* Old browsers */
+	 background: linear-gradient(to right, #46cdcf 0%, #3fb8bf 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	 color: #1f7577;
+}
+ .checkout .tab.agreement .tab__content {
+	 height: 100%;
+}
+ .checkout .tab.agreement .agreement__text {
+	 width: 100%;
+	 height: 60%;
+	 margin-top: -1rem;
+	 overflow-y: scroll;
+}
+ .checkout .tab.agreement .agreement__text::-webkit-scrollbar {
+	 width: 10px;
+	 background: #1f7577;
+	 border-radius: 10px;
+}
+ .checkout .tab.agreement .agreement__text::-webkit-scrollbar-track {
+	 background: #1f7577;
+	 border-radius: 10px;
+}
+ .checkout .tab.payment {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3d84a8+0,37779c+100 */
+	 background: #3d84a8;
+	/* Old browsers */
+	 background: linear-gradient(to right, #3d84a8 0%, #37779c 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	 color: #a1c9dd;
+}
+ .checkout .tab.confirmation {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#48466d+0,413f67+100 */
+	 background: #48466d;
+	/* Old browsers */
+	 background: linear-gradient(to right, #48466d 0%, #413f67 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	 color: #9593b9;
+}
+ .checkout .tab.confirmation .button--action {
+	 bottom: 5rem;
+	 opacity: 0.4;
+	 transition: opacity 200ms ease;
+}
+ .checkout .tab.confirmation .button--action.no {
+	 left: 1.5rem;
+}
+ .checkout .tab.confirmation .button--action.yes {
+	 width: 120px;
+	 left: 6.5rem;
+}
+ .checkout .tab.confirmation .button--action:hover {
+	 opacity: 1;
+}
+ .checkout .tab.confirmation .button--action .fa {
+	 margin-right: 5px;
+}
+ ::-webkit-input-placeholder {
+	 color: #2b8368;
+}
+ :-moz-placeholder {
+	/* Firefox 18- */
+	 color: #2b8368;
+}
+ ::-moz-placeholder {
+	/* Firefox 19+ */
+	 color: #2b8368;
+}
+ :-ms-input-placeholder {
+	 color: #2b8368;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* This will set width to 100% of the viewport width */
+    height: 100vh; /* This will set height to 100% of the viewport height */
+    font-family: "Roboto";
+    box-shadow: none; /* remove shadow for full coverage */
+}
+
+/* Override styles that set top, left and transform properties for the .checkout */
+.checkout {
+    top: 0;
+    left: 0;
+    transform: none;
+}
+body, html {
+  overflow: hidden;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+
+
+.checkout-section {
+  width: 100%;
+  padding: 1rem;
+  background-color: #46cdcf;
+  font-family: "Roboto", sans-serif;
+}
+
+h2, h3, .checkout-label, .checkout-data, .checkout-edit {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.details {
+  padding-left: 10px;
+  border-left: 4px solid #1f7577;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 1rem;
+}
+
+.checkout-item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.checkout-data-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-data {
+  color: #1f7577;
+  font-size: 1em;
+}
+
+.checkout-edit {
+  color: #008489;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkout-section {
+  background-color: transparent;
+}
+
+
+.priceDetails .line-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.priceDetails .price {
+  font-weight: bold;
+}
+
+.tab {
+  background-color: #42bfc4;
+}
+
+/*----------------------------------------------------------------*/
+
+.full-screen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Set to 50% if you want it half-screen */
+  background-color: #87bad5;
+  z-index: 2000; /* Ensures it's above all other elements */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto; /* To ensure content inside modal is scrollable if it overflows */
+}
+
+.modal-header {
+  padding: 20px;
+  background-color: #87bad5;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+
+.your-element-class {
+  border-radius: 50px; /* This will give a 10 pixel roundness to your corners */
+}
+
+.modal-content {
+  border-radius: 50px;  /* Adjust the value as per your requirement */
+}

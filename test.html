@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="test.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Ponnala:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+</head>
+<body>
+    <div id="calendar"></div>
 
-    <style>
-        @font-face {
-          font-family: "Gobold Extra1";
-          src: url("Gobold_Extra1.ttf");
-          font-weight: 400;
-        }
-      </style>      
-  </head>
-  <body>
-    <div class="lesson1">
-      <h3 class="h31">What type of lesson would you like?</h3>
-      <div class="frame-group">
-        <div class="frame-div">
-          <div class="campaign-text3">
-            <div class="campaign-text-child1"></div>
-            <b class="beginner-course3">BEGINNER COURSE</b>
-            <b class="view-course3">VIEW COURSE</b>
-          </div>
-        </div>
-        <div class="campaign-text-wrapper1">
-          <div class="campaign-text4">
-            <div class="campaign-text-child1"></div>
-            <b class="intermediate-course1">INTERMEDIATE COURSE</b>
-            <b class="view-course4">VIEW COURSE</b>
-          </div>
-        </div>
-        <div class="frame-div">
-          <div class="campaign-text5">
-            <div class="campaign-text-child1"></div>
-            <b class="group-surfing1">GROUP SURFING</b>
-            <b class="view-course5">VIEW COURSE</b>
-          </div>
-        </div>
-      </div>
+    <div id="event-form" style="display:none;">
+        <h2>Add Event</h2>
+        <form id="addEventForm">
+            <label for="eventTitle">Event Title:</label>
+            <input type="text" id="eventTitle" name="eventTitle" required>
+            <label for="eventStart">Event Start:</label>
+            <input type="datetime-local" id="eventStart" name="eventStart" required>
+            <label for="eventEnd">Event End:</label>
+            <input type="datetime-local" id="eventEnd" name="eventEnd" required>
+            <button type="button" onclick="addEvent()">Add Event</button>
+        </form>
     </div>
-  </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            const eventFormEl = document.getElementById('event-form');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                selectable: true,
+                events: [],
+                select: function(info) {
+                    eventFormEl.style.display = 'block';
+                    document.getElementById('eventStart').value = moment(info.start).format('YYYY-MM-DDTHH:mm');
+                    document.getElementById('eventEnd').value = moment(info.end).format('YYYY-MM-DDTHH:mm');
+                }
+            });
+
+            calendar.render();
+
+            window.addEvent = function() {
+                const title = document.getElementById('eventTitle').value;
+                const start = document.getElementById('eventStart').value;
+                const end = document.getElementById('eventEnd').value;
+
+                if (title && start && end) {
+                    calendar.addEvent({
+                        title: title,
+                        start: start,
+                        end: end
+                    });
+
+                    eventFormEl.style.display = 'none';
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            };
+        });
+    </script>
+</body>
 </html>

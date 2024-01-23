@@ -1,0 +1,9 @@
+{
+    "name": "sudip/paddle-cult",
+    "description": "payment",
+    "type": "n",
+    "license": "n",
+    "require": {
+        "endroid/qr-code": "^4.3"
+    }
+}

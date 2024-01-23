@@ -1,0 +1,103 @@
+<form  class="appointment-form"  method="get" action="razorpay/pay2.php">
+    <h3 class="mb-3">Reserve your Waves</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="name" class="form-control" placeholder="Name" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="phone" id="phone" name="phone" required>
+            </div>
+        </div>
+        <body>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                        <input type="text" class="form-control" placeholder="Check-In" id="checkin_date" name="checkin_date" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                        <input type="text" class="form-control" placeholder="Check-Out" id="checkout_date" name="checkout_date" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                        <input type="text" class="form-control" placeholder="Checkindifference" id="Checkindifference" name="Checkindifference" required>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="form-field">
+                    <div class="select-wrap">
+                        <div class="button-group" id="booking-type-buttons">
+                            <label class="button">
+                                <input type="radio" name="booking-type" value="Surfing" required> Surfing 
+                            </label>
+                            <label class="button">
+                                <input type="radio" name="booking-type" value="Resort Stay" required> Resort Stay 
+                            </label>
+                            <label class="button">
+                                <input type="radio" name="booking-type" value="Surf & Stay" required> Surf & Stay
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="form-field">
+                        <div class="select-wrap">
+                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                            <select class="form-control" id="num_guests" name="num_guests" required>
+                                <option value="">--Number of Guests--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input hidden type="text" name="uid" readonly value="<?php echo mt_rand(000000, 999999); ?>" Placeholder="User ID"><br>
+        <input hidden type="text" name="tid" readonly value="<?php echo mt_rand(000000, 999999); ?>" placeholder="Transaction ID or TEMP"><br>
+
+
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="total">Total Amount:</label>
+                <input type="text" id="total" name="total"class="form-control" readonly>
+            </div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Book Your WAVE Now" class="btn btn-white py-3 px-4">
+            </div>
+        </div>
+    </div>
+</form>
